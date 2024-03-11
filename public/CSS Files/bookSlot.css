@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    font-family: Poppins;
+    font-weight: 350;
+    background-color: rgb(12, 12, 12);
+}
+
+/* HEADER */
+.titlebar {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    font-weight: 200;
+    backdrop-filter: blur(8px);
+}
+#title {
+    padding: 8px 20px;
+}
+.navbar {
+    margin-right: 10px;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navbarItems {
+    height: 75px;
+    /* width: 49.8%; */
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+    color: rgb(255, 255, 255);
+    font-weight: 350;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.navbarItems:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+.navbarItems:active{
+    box-shadow: 0px 0px 8px black inset;
+}
+#balajiIcon {
+    height: 33.25px;
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 75px;
+    padding: 5px;
+    border-radius: 12px;
+    background-color: rgba(97, 97, 97, 0.8);
+}
+#locationIcon {
+    text-decoration: none;
+    padding-right: 10px;
+}
+.locationWords {
+    padding-right: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.location {
+    display: flex;
+    padding-left: 20px;
+}
+/* applying changes to devices with width less than 1080px */
+@media (max-width:1080px) {
+    #balajiIcon {
+        margin: 0 10px 0 0;
+    }
+    .location {
+        display: none;
+    }
+    #title {
+        font-size: 25px;
+        padding: 20px 12px;
+    }
+    .titlebar {
+        justify-content: space-between;
+    }
+    .navbarItems {
+        height: fit-content;
+    }
+}
+
+/* MAIN BODY CONTENT */
+/* slot selection */
+.slotBookingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slotBooking {
+    width: 90%;
+    margin: 100px 0 30px 0;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    background-color: teal;
+    box-shadow: 0 0 15px black;
+}
+#datebarTxt {
+    font-size: 38px;
+    padding: 0 15px 0 20px;
+    height: fit-content;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    width: fit-content;
+}
+.dateBar {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    font-weight: 500;
+}
+.currentDay {
+    background-color: rgba(59, 59, 59, 0.568);
+    width: 25%;
+    margin: 0 2px;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+.currentDay:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    color: black;
+}
+.inputSection {
+    padding: 20px 20px 0px 20px;
+    font-size: 24px;
+}
+#timeInput {
+    background-color: rgba(20, 71, 71, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 28px;
+    padding-left: 10px;
+    width: 81%;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+#timeHint {
+    font-size: 12px;
+    margin: 0;
+}
+#nameInput {
+    background-color: rgba(20, 71, 71, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 28px;
+    padding-left: 10px;
+    width: 81%;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+#addressInput {
+    background-color: rgba(20, 71, 71, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 28px;
+    padding-left: 10px;
+    width: 81%;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+#phnNoInput {
+    background-color: rgba(20, 71, 71, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 28px;
+    padding-left: 10px;
+    width: 81%;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+#bookSlotBtn {
+    margin: 25px 20px 0 20px;
+    height: fit-content;
+    width: 10%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 12px 15px;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#bookSlotBtn:hover {
+    /* color: black;
+    width: 12%;
+    background: linear-gradient(to left, teal, rgb(51, 51, 51), transparent 100%); */
+    box-shadow: 0 0 6px black;
+} 
+#bookHint {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 20px;
+}
+#bookedSlotTxt {
+    font-size: 30px;
+    padding: 20px 15px 0 20px;
+    height: fit-content;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    width: fit-content;
+}
+@media (max-width:1080px) {
+    #datebarTxt {
+        font-size: 16px;
+    }
+    .currentDay {
+        padding: 1px 0;
+        line-height: 24px;
+    }
+    #timeInput {
+        margin: 0;
+        width: 100%;
+    }
+    #nameInput {
+        margin: 0;
+        width: 100%;
+    }
+    #addressInput {
+        margin: 0;
+        width: 100%;
+    }
+    #phnNoInput {
+        margin: 0;
+        width: 100%;
+    }
+    #bookSlotBtn {
+        width: fit-content;
+    }
+}
+
+/* FOOTER */
+.footer {
+    height: 100px;
+    font-size: 14px;
+    background-color: rgb(14, 14, 20);
+    color: rgba(255, 255, 255, 0.664);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}

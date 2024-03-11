@@ -1,0 +1,303 @@
+body {
+    margin: 0;
+    font-family: Poppins;
+    font-weight: 350;
+    background-color: rgb(12, 12, 12);
+}
+
+/* HEADER */
+.titlebar {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    font-weight: 200;
+    backdrop-filter: blur(8px);
+}
+#title {
+    padding: 8px 20px;
+}
+.navbar {
+    margin-right: 10px;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navbarItems {
+    height: 75px;
+    /* width: 49.8%; */
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+    color: rgb(255, 255, 255);
+    font-weight: 350;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+}
+.navbarItems:hover {
+    /* font-size: 18px; */
+    /* box-shadow: 0px 0px 8px black inset; */
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    /* font-weight: 600; */
+}
+.navbarItems:active{
+    box-shadow: 0px 0px 8px black inset;
+}
+#balajiIcon {
+    height: 33.25px;
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 75px;
+    padding: 5px;
+    border-radius: 12px;
+    background-color: rgba(97, 97, 97, 0.8);
+}
+#locationIcon {
+    text-decoration: none;
+    padding-right: 10px;
+}
+.locationWords {
+    padding-right: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.location {
+    display: flex;
+    padding-left: 20px;
+}
+#visitShop {
+    cursor: pointer;
+}
+#bookSlot {
+    cursor: pointer;
+}
+/* applying changes to devices with width less than 1080px */
+@media (max-width:1080px) {
+    #balajiIcon {
+        margin: 0 10px 0 0;
+    }
+    .location {
+        display: none;
+    }
+    #title {
+        font-size: 25px;
+        padding: 20px 12px;
+    }
+    .titlebar {
+        justify-content: space-between;
+    }
+    .navbarItems {
+        height: fit-content;
+    }
+}
+
+/* MAIN BODY CONTENT */
+.tvInfoBodyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tvInfoBody {
+    margin-top: 100px;
+    height: 200px;
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: teal;
+    background: linear-gradient(to right, rgba(0,128,128,0), teal, transparent 100%),
+    linear-gradient(to left, rgba(0,128,128,0), teal, transparent 100%);
+    font-size: 25px;
+    border-radius: 12px;
+    /* box-shadow: 0px 0px 15px black; */
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+.tvInfoBody:hover {
+    width: 93%;
+    color: black;
+    background-color: teal;
+}
+.tvIcon {
+    margin-left: 20px;
+}
+.tvRepairInfo {
+    margin-left: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutUsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.aboutUs {
+    margin: 30px 0 30px 0;
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: teal;
+    background: linear-gradient(to right, rgba(0,128,128,0), teal, transparent 100%),
+    linear-gradient(to left, rgba(0,128,128,0), teal, transparent 100%);
+    color: white;
+    /* box-shadow: 0px 0px 15px black; */
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+}
+.aboutUs:hover {
+    width: 93%;
+    color: black;
+    background-color: teal;
+}
+.aboutUsTxt {
+    /* height: 100px; */
+    width: 600px;
+    margin: 20px 50px 20px 50px;
+    font-size: 20px;
+}
+.aboutUsImg {
+    margin: auto;
+    /* margin-right: 50px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.faqContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.faq {
+    margin: 0px 0 30px 0;
+    width: 90%;
+    height: fit-content;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 0 15px black;
+}
+#faqTxt {
+    padding: 15px 15px 0 15px;
+    height: fit-content;
+    font-weight: 600;
+    color: rgb(41, 41, 41);
+    width: fit-content;
+}
+.qnSection {
+    padding: 20px 20px 20px 20px;
+    font-size: 24px;
+}
+#qnInput {
+    background-color: rgba(128, 128, 128, 0.35);
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 28px;
+    padding-left: 10px;
+    width: 81%;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+.phnNoSection {
+    padding: 0px 20px 20px 20px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+#phnNoSelect {
+    background-color: rgba(128, 128, 128, 0.35);
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 26px;
+    padding: 0 10px;
+    width: fit-content;
+    font-size: 18px;
+}
+#WAhint {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 10px;
+}
+#sendQueryBtn {
+    margin: 0 20px 20px 20px;
+    height: fit-content;
+    border: none;
+    border-radius: 10px;
+    background-color: teal;
+    color: white;
+    padding: 12px 15px;
+    font-size: large;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+#sendQueryBtn:hover {
+    color: black;
+}
+@media (max-width:1080px) {
+    .phnNoSection {
+        display: block;
+    }
+    #phnNoSelect {
+        width: 100%;
+        padding-left: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #qnInput {
+        width: 100%;
+        padding-left: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .tvInfoBody {
+        background-color: teal;
+    }
+    .tvRepairInfo {
+        margin-left: 0;
+    }
+    .aboutUs {
+        background-color: teal;
+    }
+    .aboutUsImg {
+        margin-bottom: 25px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    height: 100px;
+    font-size: 14px;
+    background-color: rgb(14, 14, 20);
+    color: rgba(255, 255, 255, 0.664);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}

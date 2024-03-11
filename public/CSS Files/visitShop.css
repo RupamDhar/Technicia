@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    font-family: Poppins;
+    font-weight: 350;
+    background-color: rgb(12, 12, 12);
+}
+
+/* HEADER */
+.titlebar {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    font-weight: 200;
+    backdrop-filter: blur(8px);
+}
+#title {
+    padding: 8px 20px;
+}
+.navbar {
+    margin-right: 10px;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navbarItems {
+    height: 75px;
+    /* width: 49.8%; */
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+    color: rgb(255, 255, 255);
+    font-weight: 350;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.navbarItems:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+.navbarItems:active{
+    box-shadow: 0px 0px 8px black inset;
+}
+#balajiIcon {
+    height: 33.25px;
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 75px;
+    padding: 5px;
+    border-radius: 12px;
+    background-color: rgba(97, 97, 97, 0.8);
+}
+#locationIcon {
+    text-decoration: none;
+    padding-right: 10px;
+}
+.locationWords {
+    padding-right: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.location {
+    display: flex;
+    padding-left: 20px;
+}
+/* applying changes to devices with width less than 1080px */
+@media (max-width:1080px) {
+    #balajiIcon {
+        margin: 0 10px 0 0;
+    }
+    .location {
+        display: none;
+    }
+    #title {
+        font-size: 25px;
+        padding: 20px 12px;
+    }
+    .titlebar {
+        justify-content: space-between;
+    }
+    .navbarItems {
+        height: fit-content;
+    }
+}
+
+/* CONTENT */
+#addressContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#address {
+    margin-top: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: teal;
+    color: white;
+    font-size: 25px;
+    background: linear-gradient(to right, rgba(0,128,128,0), teal, transparent 80%),
+    linear-gradient(to left, rgba(0,128,128,0), teal, transparent 80%);
+    padding: 20px 0;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 15px black; */
+    transition: all 0.2s ease-in-out;
+}
+#address:hover {
+    width: 93%;
+    font-size: 26px;
+    color: black;
+    background-color: teal;
+}
+
+#directionIcon {
+    padding: 0 15px;
+    cursor: pointer;
+}
+#directionIcon:hover #tooltipNavigate{
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+}
+#tooltipNavigate {
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    opacity: 0;
+    margin-top: -34px;
+    margin-left: -30px;
+    transition: all 0.1s ease-in;
+}
+
+#copyIcon {
+    padding: 15px;
+    margin: 10px;
+    height: 32px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(20, 71, 71, 0.5);
+    cursor: pointer;
+}
+#copyIcon:hover #tooltipCopy{
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+}
+#tooltipCopy {
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    opacity: 0;
+    margin-top: -100px;
+    transition: all 0.1s ease-in;
+}
+
+#shopTimingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#shopTiming {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px 15px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: teal;
+    background: linear-gradient(to right, rgba(0,128,128,0), teal, transparent 80%),
+    linear-gradient(to left, rgba(0,128,128,0), teal, transparent 80%);
+    color: white;
+    font-size: 25px;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 15px black; */
+    bottom: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+#shopTiming:hover {
+    width: 93%;
+    /* font-size: 26px; */
+    color: black;
+    background-color: teal;
+}
+
+#mapContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#map {
+    width: 90%;
+    height: 450px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 15px black;
+}
+
+@media (max-width:1080px) {
+    #address {
+        background-color: teal;
+    }
+    #addrTxt {
+        font-size: 20px;
+    }
+    #shopTiming {
+        background-color: teal;
+        font-size: 20px;
+    }
+    #map {
+        width: fit-content;
+    }
+}
+
+/* FOOTER */
+.footer {
+    /* below two lines to attach footer to bottom of page */
+    /* position: fixed;
+    bottom: 0; */
+    /* margin-top: 30px; */
+    height: 100px;
+    width: 100%;
+    font-size: 14px;
+    background-color: rgb(14, 14, 20);
+    color: rgba(255, 255, 255, 0.664);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
