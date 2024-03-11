@@ -1,6 +1,6 @@
 # Technicia
 
-This project is a full-stack web application designed to streamline the process of booking slots for visiting our electronic appliance store, Technicia. It allows customers to schedule their visits in advance, ensuring a smooth and efficient experience for both customers and staff.
+Technicia is a full-stack web application designed to streamline the process of booking slots for visiting our electronic appliance store, Technicia. It allows customers to schedule their visits in advance, ensuring a smooth and efficient experience for both customers and staff.
 
 ## Features
 
