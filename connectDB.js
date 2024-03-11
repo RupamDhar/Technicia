@@ -12,7 +12,7 @@ async function updateDBQuery(message, receiverNo)
         await client.connect();
         console.log("connected to db");
 
-        let result = await client.db('BalajiElectronics').collection('Queries').insertOne(document);
+        let result = await client.db('Technicia').collection('Queries').insertOne(document);
         console.log(result);
     }
     catch(error) {
@@ -38,7 +38,7 @@ async function updateDBbooking(bookTime, bookDate, bookName, bookAddress, bookPh
         await client.connect();
         console.log("connected to db");
 
-        let result = await client.db('BalajiElectronics').collection('Booking').insertOne(document);
+        let result = await client.db('Technicia').collection('Booking').insertOne(document);
         console.log(result);
     }
     catch(error) {
@@ -58,7 +58,7 @@ async function getBookedSlots(selectedDate)
         console.log("connected to db");
 
         let resultArr = [];
-        let result = await client.db('BalajiElectronics').collection('Booking').find({date: selectedDate}).toArray();
+        let result = await client.db('Technicia').collection('Booking').find({date: selectedDate}).toArray();
         result.forEach((element, index)=>{
             if(index <= 2) resultArr.push(element.time);
         });
@@ -78,7 +78,7 @@ async function getJSONdata(collection)
 {
     try{
         await client.connect();
-        return await client.db('BalajiElectronics').collection(collection).find({}).toArray();
+        return await client.db('Technicia').collection(collection).find({}).toArray();
     }
     catch(error) {
         console.log('Couldnt connect to db');
