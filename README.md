@@ -18,4 +18,6 @@ Technicia is a full-stack web application designed to streamline the process of 
 - **Templating Engine:** EJS (Embedded JavaScript)
 - **Libraries/Frameworks:** Mongoose
 
+---
 
+**Author:** [Rupam Dhar](https://github.com/RupamDhar)
