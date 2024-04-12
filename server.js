@@ -13,12 +13,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 //updating database if query present
 app.get('/', (req,res)=>
 {
-    res.sendFile(path.join(__dirname, '/public/HTML Files/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
     if(req.query.query!=null) mongodb.updateDBQuery(req.query.query, req.query.receiverNo);
 });
 app.get('/home', (req,res)=>
 {
-    res.sendFile(path.join(__dirname, '/public/HTML Files/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
     if(req.query.query!=null) mongodb.updateDBQuery(req.query.query, req.query.receiverNo);
 });
 
