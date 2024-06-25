@@ -21,3 +21,4 @@ Technicia is a full-stack web application designed to streamline the process of 
 ---
 
 **Author:** [Rupam Dhar](https://github.com/RupamDhar)
+**Visit Site:** https://technicia.vercel.app/
